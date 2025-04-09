@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Conversão</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="form-box">
+    <h1>Resultado da Conversão</h1>
+
+    <p><strong>Cotação do Dólar:</strong> R$ <span th:text="${conversao.cotacao}"></span></p>
+    <p><strong>Quantidade em Dólar:</strong> US$ <span th:text="${conversao.valorDolar}"></span></p>
+    <p><strong>Valor em Reais:</strong> R$ <span th:text="${conversao.valorConvertido}"></span></p>
+</div>
+</body>
+</html>

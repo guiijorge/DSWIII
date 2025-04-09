@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado - Dados da Pessoa</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="form-box">
+    <h1>Dados Recebidos</h1>
+
+    <div style="text-align: left;">
+        <label><strong>Nome:</strong></label>
+        <p th:text="${pessoa.nome}">Nome</p>
+
+        <label><strong>Data de Nascimento:</strong></label>
+        <p th:text="${#temporals.format(pessoa.dataNascimento, 'dd/MM/yyyy')}">00/00/0000</p>
+
+        <label><strong>Altura:</strong></label>
+        <p><span th:text="${pessoa.altura}">0.00</span> cm</p>
+    </div>
+
+    <a th:href="@{/form-pessoa}">
+        <button style="margin-top: 20px;">Voltar</button>
+    </a>
+</div>
+</body>
+</html>
